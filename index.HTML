@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Factibilidad Económica - SIGTUR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#eef3fa;
+
+color:#222;
+
+}
+
+header{
+
+background:#454545;
+
+color:white;
+
+padding:12px 30px;
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+.hero{
+
+background:white;
+
+padding:60px 8%;
+
+min-height:700px;
+
+}
+
+.bienvenida{
+
+font-size:58px;
+
+font-weight:700;
+
+color:#2F5EE5;
+
+margin-bottom:25px;
+
+}
+
+.titulo{
+
+font-size:105px;
+
+font-weight:800;
+
+line-height:95px;
+
+color:#1F2937;
+
+}
+
+.titulo span{
+
+display:block;
+
+color:#18BBB2;
+
+}
+
+.descripcion{
+
+margin-top:35px;
+
+width:760px;
+
+font-size:27px;
+
+line-height:46px;
+
+color:#555;
+
+}
+
+.autor{
+
+margin-top:30px;
+
+width:760px;
+
+padding:22px;
+
+background:white;
+
+border-left:8px solid #2F5EE5;
+
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+border-radius:12px;
+
+font-size:19px;
+
+line-height:34px;
+
+}
+
+.iconos{
+
+margin-top:40px;
+
+font-size:78px;
+
+letter-spacing:18px;
+
+}
+
+.menu{
+
+background:linear-gradient(90deg,#2F5EE5,#7A36F4);
+
+padding:28px;
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.menu button{
+
+border:none;
+
+background:rgba(255,255,255,.15);
+
+padding:18px 30px;
+
+border-radius:18px;
+
+font-size:19px;
+
+font-weight:600;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.menu button:hover{
+
+background:white;
+
+color:#2F5EE5;
+
+transform:translateY(-5px);
+
+}
+
+.contenido{
+
+display:none;
+
+width:90%;
+
+margin:40px auto;
+
+background:white;
+
+padding:45px;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.contenido h2{
+
+color:#2F5EE5;
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.contenido p{
+
+font-size:22px;
+
+line-height:38px;
+
+margin-bottom:20px;
+
+}
+
+.contenido img{
+
+width:100%;
+
+margin-top:20px;
+
+border-radius:12px;
+
+}
+
+footer{
+
+background:#1F2937;
+
+color:white;
+
+text-align:center;
+
+padding:35px;
+
+margin-top:60px;
+
+font-size:18px;
+
+}
+
+</style>
+
+</head>
+<body>
+
+
+<section class="hero">
+
+<div style="max-width:900px;">
+
+<div class="bienvenida">
+
+Bienvenidos al curso
+
+</div>
+
+<h1 class="titulo">
+
+FACTIBILIDAD
+
+<span>ECONÓMICA</span>
+
+</h1>
+
+<p class="descripcion">
+
+La <strong>factibilidad económica</strong> consiste en determinar si un proyecto de software es viable desde el punto de vista financiero, evaluando los costos de desarrollo, implementación, operación y mantenimiento frente a los beneficios esperados.
+
+</p>
+
+<div class="autor">
+
+<strong>Roger S. Pressman</strong> afirma que el estudio de factibilidad permite determinar si los beneficios que aportará un sistema justifican la inversión necesaria para su desarrollo, siendo una etapa esencial antes de iniciar un proyecto de software.
+
+</div>
+
+
+
+</div>
+
+</section>
+
+<nav class="menu">
+
+<button onclick="mostrar('inicio')">
+
+🏠 Inicio
+
+</button>
+
+<button onclick="mostrar('pf')">
+
+📊 Puntos de Función
+
+</button>
+
+<button onclick="mostrar('sigtur')">
+
+💻 Funciones SIGTUR
+
+</button>
+
+<button onclick="mostrar('anexos')">
+
+📎 Anexos
+
+</button>
+
+</nav>
+<main>
+
+<!-- ========================= -->
+<!-- INICIO -->
+<!-- ========================= -->
+
+<section id="inicio" class="contenido" style="display:block;">
+
+<h2>📖 Actividad</h2>
+
+<p>
+
+La <strong>Intendencia de Salto</strong> desea contratar una empresa para desarrollar la plataforma web
+<strong>"SIGTUR"</strong>, destinada a la difusión de eventos turísticos del departamento.
+
+</p>
+
+<p>
+
+Como empresa desarrolladora deberán elaborar un presupuesto para construir el sistema
+utilizando la técnica de <strong>Puntos de Función</strong>.
+
+</p>
+
+<p>
+
+Antes de comenzar deberán analizar los requerimientos, identificar las funciones del
+sistema y clasificarlas según la metodología de Análisis de Puntos de Función.
+
+</p>
+
+<div style="margin-top:35px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;">
+
+<div style="background:#f8fafc;
+padding:25px;
+border-radius:15px;
+border-left:6px solid #2F5EE5;">
+
+<h3>📋 Objetivo</h3>
+
+<p style="font-size:17px;">
+Comprender cómo estimar el costo de un proyecto de software.
+</p>
+
+</div>
+
+<div style="background:#f8fafc;
+padding:25px;
+border-radius:15px;
+border-left:6px solid #18BBB2;">
+
+<h3>🎯 Meta</h3>
+
+<p style="font-size:17px;">
+Clasificar correctamente las funcionalidades de SIGTUR.
+</p>
+
+</div>
+
+<div style="background:#f8fafc;
+padding:25px;
+border-radius:15px;
+border-left:6px solid #7A36F4;">
+
+<h3>💻 Resultado</h3>
+
+<p style="font-size:17px;">
+Se sentarán las bases para elaborar una estimación económica.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PUNTOS DE FUNCIÓN -->
+<!-- ========================= -->
+
+<section id="pf" class="contenido">
+
+<h2>📊 Puntos de Función</h2>
+
+<p>
+
+Los <strong>Puntos de Función</strong> son una métrica utilizada en Ingeniería del Software
+para medir el tamaño funcional de un sistema desde la perspectiva del usuario.
+
+</p>
+
+<p>
+
+Permiten estimar el esfuerzo, el tiempo y el costo del desarrollo
+a partir de las funciones que ofrece el sistema.
+
+</p>
+
+<img src="img/imagen2.png" alt="Puntos de Función">
+
+</section>
+
+<!-- ========================= -->
+<!-- FUNCIONES SIGTUR -->
+<!-- ========================= -->
+
+<section id="sigtur" class="contenido">
+
+<h2>💻 Funciones SIGTUR</h2>
+
+<p>
+
+La Intendencia de Salto desea contratar una empresa para desarrollar la plataforma web
+<strong>"SIGTUR"</strong>, destinada a la difusión de eventos turísticos del departamento.
+
+</p>
+
+<p>
+
+Como empresa desarrolladora deberán presentar un presupuesto para construir el sistema.
+
+</p>
+
+<h3 style="margin-top:30px;color:#2F5EE5;">
+Situación
+</h3>
+
+<p>
+
+Los estudiantes asumirán el rol de una empresa de desarrollo de software interesada
+en obtener el proyecto.
+
+</p>
+
+<img src="img/ChatGPT Image 20 jul 2026, 12_16_39 a.m..png" alt="Anexo 1">
+
+
+</section>
+<!-- ===================================== -->
+<!-- ANEXOS -->
+<!-- ===================================== -->
+
+<section id="anexos" class="contenido">
+
+<h2>📎 Anexos</h2>
+
+<p>
+
+Los siguientes anexos contienen la información necesaria para identificar,
+clasificar y valorar las funciones del sistema SIGTUR mediante la técnica
+de Puntos de Función.
+
+</p>
+
+<div style="display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:35px;">
+
+<div style="background:#f8fafc;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);">
+
+<h3 style="color:#2F5EE5;margin-bottom:15px;">
+📄 Anexo 1
+</h3>
+
+<p style="font-size:16px;margin-bottom:15px;">
+Tipos de Función utilizados en el Análisis de Puntos de Función.
+</p>
+
+<img src="img/imagen1.png" alt="Anexo 1">
+</div>
+
+<div style="background:#f8fafc;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);">
+
+<h3 style="color:#2F5EE5;margin-bottom:15px;">
+📄 Anexo 2
+</h3>
+
+<p style="font-size:16px;margin-bottom:15px;">
+Funciones propuestas para la plataforma SIGTUR.
+</p>
+
+<img src="img/imagen2.png" alt="Anexo 2">
+</div>
+
+<div style="background:#f8fafc;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);">
+
+<h3 style="color:#2F5EE5;margin-bottom:15px;">
+📄 Anexo 3
+</h3>
+
+<p style="font-size:16px;margin-bottom:15px;">
+Clasificación de funcionalidades para realizar la estimación.
+</p>
+
+<img src="img/imagen3.png" alt="Anexo 3">
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<h3>SIGTUR · Factibilidad Económica</h3>
+
+<p>
+
+Ingeniería de Software · Estimación mediante Puntos de Función
+
+</p>
+
+</footer>
+<script>
+
+// ==============================
+// Mostrar secciones
+// ==============================
+
+function mostrar(id){
+
+// Oculta todas las secciones
+const secciones=document.querySelectorAll(".contenido");
+
+secciones.forEach(function(sec){
+sec.style.display="none";
+});
+
+// Muestra la seleccionada
+document.getElementById(id).style.display="block";
+
+// Cambia el botón activo
+const botones=document.querySelectorAll(".menu button");
+
+botones.forEach(function(btn){
+btn.classList.remove("activo");
+});
+
+event.target.classList.add("activo");
+
+// Desplazamiento suave
+document.getElementById(id).scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+// ==============================
+// Animación inicial
+// ==============================
+
+window.onload=function(){
+
+document.getElementById("inicio").style.display="block";
+
+}
+
+</script>
+
+<style>
+
+/* Botón activo */
+
+.menu button.activo{
+
+background:white;
+color:#2F5EE5;
+font-weight:bold;
+box-shadow:0 8px 18px rgba(0,0,0,.20);
+
+}
+
+/* Animación */
+
+.contenido{
+
+animation:fade .5s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.titulo{
+
+font-size:60px;
+line-height:60px;
+
+}
+
+.descripcion{
+
+width:100%;
+font-size:20px;
+line-height:34px;
+
+}
+
+.autor{
+
+width:100%;
+
+}
+
+.bienvenida{
+
+font-size:40px;
+
+}
+
+.iconos{
+
+font-size:50px;
+
+}
+
+.menu{
+
+padding:15px;
+
+}
+
+.menu button{
+
+width:100%;
+
+}
+
+}
+
+</style>
+
+</body>
+
+</html>
