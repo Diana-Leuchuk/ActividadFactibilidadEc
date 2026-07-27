@@ -21,210 +21,268 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-
 background:#eef3fa;
-
 color:#222;
-
 }
 
 header{
-
 background:#454545;
-
 color:white;
-
 padding:12px 30px;
-
 font-size:28px;
-
 font-weight:700;
-
 }
 
 .hero{
-
 background:white;
-
 padding:60px 8%;
-
 min-height:700px;
-
 }
 
 .bienvenida{
-
 font-size:58px;
-
 font-weight:700;
-
 color:#2F5EE5;
-
 margin-bottom:25px;
-
 }
 
 .titulo{
-
 font-size:105px;
-
 font-weight:800;
-
 line-height:95px;
-
 color:#1F2937;
-
 }
 
 .titulo span{
-
 display:block;
-
 color:#18BBB2;
-
 }
 
 .descripcion{
-
 margin-top:35px;
-
 width:760px;
-
 font-size:27px;
-
 line-height:46px;
-
 color:#555;
-
 }
 
 .autor{
-
 margin-top:30px;
-
 width:760px;
-
 padding:22px;
-
 background:white;
-
 border-left:8px solid #2F5EE5;
-
 box-shadow:0 8px 18px rgba(0,0,0,.08);
-
 border-radius:12px;
-
 font-size:19px;
-
 line-height:34px;
-
 }
 
 .iconos{
-
 margin-top:40px;
-
 font-size:78px;
-
 letter-spacing:18px;
-
 }
 
 .menu{
-
 background:linear-gradient(90deg,#2F5EE5,#7A36F4);
-
 padding:28px;
-
 display:flex;
-
 justify-content:center;
-
 gap:18px;
-
 flex-wrap:wrap;
-
 }
 
 .menu button{
-
 border:none;
-
 background:rgba(255,255,255,.15);
-
 padding:18px 30px;
-
 border-radius:18px;
-
 font-size:19px;
-
 font-weight:600;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+.menu button:hover{
+background:white;
+color:#2F5EE5;
+transform:translateY(-5px);
+}
+
+.contenido{
+display:none;
+width:90%;
+margin:40px auto;
+background:white;
+padding:45px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.contenido h2{
+color:#2F5EE5;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contenido p{
+font-size:22px;
+line-height:38px;
+margin-bottom:20px;
+}
+
+.contenido img{
+width:100%;
+margin-top:20px;
+border-radius:12px;
+}
+
+
+/* ================================= */
+/* BOTÓN ACTIVO */
+/* ================================= */
+
+.menu button.activo{
+background:white;
+color:#2F5EE5;
+font-weight:bold;
+box-shadow:0 8px 18px rgba(0,0,0,.20);
+}
+
+
+/* ================================= */
+/* ANIMACIÓN */
+/* ================================= */
+
+.contenido{
+animation:fade .5s;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+/* ================================= */
+/* IMÁGENES CLICKEABLES */
+/* ================================= */
+
+.imagen-anexo{
+
+cursor:pointer;
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease;
+
+}
+
+.imagen-anexo:hover{
+
+transform:scale(1.02);
+
+box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+}
+
+
+/* ================================= */
+/* VENTANA DE IMAGEN AMPLIADA */
+/* ================================= */
+
+.modal-imagen{
+
+display:none;
+
+position:fixed;
+
+z-index:9999;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.85);
+
+justify-content:center;
+align-items:center;
+
+padding:30px;
+
+}
+
+
+/* Imagen grande */
+
+.modal-imagen img{
+
+max-width:90%;
+
+max-height:90vh;
+
+width:auto;
+
+height:auto;
+
+border-radius:12px;
+
+box-shadow:0 10px 40px rgba(0,0,0,.5);
+
+}
+
+
+/* ================================= */
+/* BOTÓN CERRAR */
+/* ================================= */
+
+.cerrar-imagen{
+
+position:absolute;
+
+top:15px;
+
+right:30px;
 
 color:white;
+
+font-size:50px;
+
+font-weight:bold;
 
 cursor:pointer;
 
 transition:.3s;
 
-}
-
-.menu button:hover{
-
-background:white;
-
-color:#2F5EE5;
-
-transform:translateY(-5px);
+z-index:10000;
 
 }
 
-.contenido{
+.cerrar-imagen:hover{
 
-display:none;
+color:#18BBB2;
 
-width:90%;
-
-margin:40px auto;
-
-background:white;
-
-padding:45px;
-
-border-radius:18px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.12);
+transform:scale(1.15);
 
 }
 
-.contenido h2{
 
-color:#2F5EE5;
-
-font-size:40px;
-
-margin-bottom:20px;
-
-}
-
-.contenido p{
-
-font-size:22px;
-
-line-height:38px;
-
-margin-bottom:20px;
-
-}
-
-.contenido img{
-
-width:100%;
-
-margin-top:20px;
-
-border-radius:12px;
-
-}
+/* ================================= */
+/* FOOTER */
+/* ================================= */
 
 footer{
 
@@ -242,11 +300,75 @@ font-size:18px;
 
 }
 
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+@media(max-width:900px){
+
+.titulo{
+font-size:60px;
+line-height:60px;
+}
+
+.descripcion{
+width:100%;
+font-size:20px;
+line-height:34px;
+}
+
+.autor{
+width:100%;
+}
+
+.bienvenida{
+font-size:40px;
+}
+
+.iconos{
+font-size:50px;
+}
+
+.menu{
+padding:15px;
+}
+
+.menu button{
+width:100%;
+}
+
+
+/* Imagen ampliada en celular */
+
+.modal-imagen{
+padding:15px;
+}
+
+.modal-imagen img{
+max-width:95%;
+max-height:85vh;
+}
+
+.cerrar-imagen{
+top:10px;
+right:20px;
+font-size:40px;
+}
+
+}
+
 </style>
 
 </head>
+
+
 <body>
 
+
+<!-- ================================= -->
+<!-- PORTADA -->
+<!-- ================================= -->
 
 <section class="hero">
 
@@ -278,44 +400,53 @@ La <strong>factibilidad económica</strong> consiste en determinar si un proyect
 
 </div>
 
-
-
 </div>
 
 </section>
 
+
+<!-- ================================= -->
+<!-- MENÚ -->
+<!-- ================================= -->
+
 <nav class="menu">
 
-<button onclick="mostrar('inicio')">
+<button onclick="mostrar('inicio', this)">
 
- Inicio
-
-</button>
-
-<button onclick="mostrar('pf')">
-
- Puntos de Función
+Inicio
 
 </button>
 
-<button onclick="mostrar('sigtur')">
 
- Funciones SIGTUR
+<button onclick="mostrar('pf', this)">
+
+Puntos de Función
 
 </button>
 
-<button onclick="mostrar('anexos')">
+
+<button onclick="mostrar('sigtur', this)">
+
+Funciones SIGTUR
+
+</button>
+
+
+<button onclick="mostrar('anexos', this)">
 
 📎 Anexos
 
 </button>
 
 </nav>
+
+
 <main>
 
-<!-- ========================= -->
+
+<!-- ================================= -->
 <!-- INICIO -->
-<!-- ========================= -->
+<!-- ================================= -->
 
 <section id="inicio" class="contenido" style="display:block;">
 
@@ -342,10 +473,12 @@ sistema y clasificarlas según la metodología de Análisis de Puntos de Funció
 
 </p>
 
+
 <div style="margin-top:35px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;">
+
 
 <div style="background:#f8fafc;
 padding:25px;
@@ -355,48 +488,59 @@ border-left:6px solid #2F5EE5;">
 <h3>📋 Objetivo</h3>
 
 <p style="font-size:17px;">
+
 Comprender cómo estimar el costo de un proyecto de software.
+
 </p>
 
 </div>
+
 
 <div style="background:#f8fafc;
 padding:25px;
 border-radius:15px;
 border-left:6px solid #18BBB2;">
 
-<h3> Meta</h3>
+<h3>Meta</h3>
 
 <p style="font-size:17px;">
+
 Clasificar correctamente las funcionalidades de SIGTUR.
+
 </p>
 
 </div>
+
 
 <div style="background:#f8fafc;
 padding:25px;
 border-radius:15px;
 border-left:6px solid #7A36F4;">
 
-<h3> Resultado</h3>
+<h3>Resultado</h3>
 
 <p style="font-size:17px;">
+
 Se sentarán las bases para elaborar una estimación económica.
+
 </p>
 
 </div>
+
 
 </div>
 
 </section>
 
-<!-- ========================= -->
+
+
+<!-- ================================= -->
 <!-- PUNTOS DE FUNCIÓN -->
-<!-- ========================= -->
+<!-- ================================= -->
 
 <section id="pf" class="contenido">
 
-<h2> Puntos de Función</h2>
+<h2>Puntos de Función</h2>
 
 <p>
 
@@ -412,17 +556,25 @@ a partir de las funciones que ofrece el sistema.
 
 </p>
 
-<img src="img/imagen2.png" alt="Puntos de Función">
+
+<img
+src="imagen2.png"
+alt="Puntos de Función"
+class="imagen-anexo"
+onclick="abrirImagen(this)"
+>
 
 </section>
 
-<!-- ========================= -->
+
+
+<!-- ================================= -->
 <!-- FUNCIONES SIGTUR -->
-<!-- ========================= -->
+<!-- ================================= -->
 
 <section id="sigtur" class="contenido">
 
-<h2> Funciones SIGTUR</h2>
+<h2>Funciones SIGTUR</h2>
 
 <p>
 
@@ -438,7 +590,9 @@ Como empresa desarrolladora deberán presentar un presupuesto para construir el 
 </p>
 
 <h3 style="margin-top:30px;color:#2F5EE5;">
+
 Situación
+
 </h3>
 
 <p>
@@ -448,13 +602,22 @@ en obtener el proyecto.
 
 </p>
 
-<img src="ChatGPT Image 20 jul 2026, 12_16_39 a.m..png" alt="Anexo 1">
+
+<img
+src="ChatGPT Image 20 jul 2026, 12_16_39 a.m..png"
+alt="Funciones SIGTUR"
+class="imagen-anexo"
+onclick="abrirImagen(this)"
+>
 
 
 </section>
-<!-- ===================================== -->
+
+
+
+<!-- ================================= -->
 <!-- ANEXOS -->
-<!-- ===================================== -->
+<!-- ================================= -->
 
 <section id="anexos" class="contenido">
 
@@ -468,26 +631,50 @@ de Puntos de Función.
 
 </p>
 
+
 <div style="display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 margin-top:35px;">
 
+
+
+<!-- ================================= -->
+<!-- ANEXO 1 -->
+<!-- ================================= -->
+
 <div style="background:#f8fafc;
 padding:20px;
 border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);">
 
 <h3 style="color:#2F5EE5;margin-bottom:15px;">
+
 📄 Anexo 1
+
 </h3>
 
 <p style="font-size:16px;margin-bottom:15px;">
+
 Tipos de Función utilizados en el Análisis de Puntos de Función.
+
 </p>
 
-<img src="imagen1.png" alt="Anexo 1">
+
+<img
+src="imagen1.png"
+alt="Anexo 1"
+class="imagen-anexo"
+onclick="abrirImagen(this)"
+>
+
 </div>
+
+
+
+<!-- ================================= -->
+<!-- ANEXO 2 -->
+<!-- ================================= -->
 
 <div style="background:#f8fafc;
 padding:20px;
@@ -495,15 +682,32 @@ border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);">
 
 <h3 style="color:#2F5EE5;margin-bottom:15px;">
+
 📄 Anexo 2
+
 </h3>
 
 <p style="font-size:16px;margin-bottom:15px;">
+
 Funciones propuestas para la plataforma SIGTUR.
+
 </p>
 
-<img src="imagen2.png" alt="Anexo 2">
+
+<img
+src="imagen2.png"
+alt="Anexo 2"
+class="imagen-anexo"
+onclick="abrirImagen(this)"
+>
+
 </div>
+
+
+
+<!-- ================================= -->
+<!-- ANEXO 3 -->
+<!-- ================================= -->
 
 <div style="background:#f8fafc;
 padding:20px;
@@ -511,25 +715,85 @@ border-radius:15px;
 box-shadow:0 5px 15px rgba(0,0,0,.08);">
 
 <h3 style="color:#2F5EE5;margin-bottom:15px;">
+
 📄 Anexo 3
+
 </h3>
 
 <p style="font-size:16px;margin-bottom:15px;">
+
 Clasificación de funcionalidades para realizar la estimación.
+
 </p>
 
-<img src="imagen3.png" alt="Anexo 3">
+
+<img
+src="imagen3.png"
+alt="Anexo 3"
+class="imagen-anexo"
+onclick="abrirImagen(this)"
+>
+
 </div>
+
 
 </div>
 
 </section>
 
+
 </main>
+
+
+
+<!-- ================================= -->
+<!-- VENTANA DE IMAGEN AMPLIADA -->
+<!-- ================================= -->
+
+<div
+id="modalImagen"
+class="modal-imagen"
+onclick="cerrarImagen()"
+>
+
+
+<!-- BOTÓN CERRAR -->
+
+<span
+class="cerrar-imagen"
+onclick="cerrarImagen()"
+>
+
+×
+
+</span>
+
+
+<!-- IMAGEN GRANDE -->
+
+<img
+id="imagenGrande"
+src=""
+alt="Imagen ampliada"
+onclick="event.stopPropagation()"
+>
+
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- FOOTER -->
+<!-- ================================= -->
 
 <footer>
 
-<h3>SIGTUR · Factibilidad Económica</h3>
+<h3>
+
+SIGTUR · Factibilidad Económica
+
+</h3>
 
 <p>
 
@@ -538,144 +802,159 @@ Ingeniería de Software · Estimación mediante Puntos de Función
 </p>
 
 </footer>
+
+
+
+<!-- ================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================= -->
+
 <script>
 
-// ==============================
-// Mostrar secciones
-// ==============================
 
-function mostrar(id){
+// ==================================
+// MOSTRAR SECCIONES
+// ==================================
 
-// Oculta todas las secciones
-const secciones=document.querySelectorAll(".contenido");
+function mostrar(id, boton){
+
+
+// Ocultar todas las secciones
+
+const secciones =
+document.querySelectorAll(".contenido");
+
 
 secciones.forEach(function(sec){
+
 sec.style.display="none";
+
 });
 
-// Muestra la seleccionada
+
+// Mostrar sección seleccionada
+
 document.getElementById(id).style.display="block";
 
-// Cambia el botón activo
-const botones=document.querySelectorAll(".menu button");
+
+// Quitar botón activo
+
+const botones =
+document.querySelectorAll(".menu button");
+
 
 botones.forEach(function(btn){
+
 btn.classList.remove("activo");
+
 });
 
-event.target.classList.add("activo");
+
+// Activar botón seleccionado
+
+boton.classList.add("activo");
+
 
 // Desplazamiento suave
+
 document.getElementById(id).scrollIntoView({
+
 behavior:"smooth",
+
 block:"start"
+
 });
 
 }
 
-// ==============================
-// Animación inicial
-// ==============================
+
+
+// ==================================
+// ABRIR IMAGEN
+// ==================================
+
+function abrirImagen(imagen){
+
+
+// Obtener ventana
+
+const modal =
+document.getElementById("modalImagen");
+
+
+// Obtener imagen grande
+
+const imagenGrande =
+document.getElementById("imagenGrande");
+
+
+// Colocar imagen seleccionada
+
+imagenGrande.src = imagen.src;
+
+
+// Mostrar ventana
+
+modal.style.display="flex";
+
+}
+
+
+
+// ==================================
+// CERRAR IMAGEN
+// ==================================
+
+function cerrarImagen(){
+
+
+// Obtener ventana
+
+const modal =
+document.getElementById("modalImagen");
+
+
+// Ocultar ventana
+
+modal.style.display="none";
+
+
+// Limpiar imagen
+
+document.getElementById("imagenGrande").src="";
+
+}
+
+
+
+// ==================================
+// CERRAR CON ESC
+// ==================================
+
+document.addEventListener("keydown", function(event){
+
+if(event.key === "Escape"){
+
+cerrarImagen();
+
+}
+
+});
+
+
+
+// ==================================
+// INICIO
+// ==================================
 
 window.onload=function(){
 
 document.getElementById("inicio").style.display="block";
 
-}
+};
 
 </script>
 
-<style>
-
-/* Botón activo */
-
-.menu button.activo{
-
-background:white;
-color:#2F5EE5;
-font-weight:bold;
-box-shadow:0 8px 18px rgba(0,0,0,.20);
-
-}
-
-/* Animación */
-
-.contenido{
-
-animation:fade .5s;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-/* Responsive */
-
-@media(max-width:900px){
-
-.titulo{
-
-font-size:60px;
-line-height:60px;
-
-}
-
-.descripcion{
-
-width:100%;
-font-size:20px;
-line-height:34px;
-
-}
-
-.autor{
-
-width:100%;
-
-}
-
-.bienvenida{
-
-font-size:40px;
-
-}
-
-.iconos{
-
-font-size:50px;
-
-}
-
-.menu{
-
-padding:15px;
-
-}
-
-.menu button{
-
-width:100%;
-
-}
-
-}
-
-</style>
 
 </body>
 
